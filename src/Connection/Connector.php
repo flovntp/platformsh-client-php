@@ -93,9 +93,9 @@ class Connector implements ConnectorInterface
         }
 
         $defaults = [
-            'api_url' => 'https://api.platform.sh',
-            'accounts' => 'https://api.platform.sh/',
-            'client_id' => 'platformsh-client-php',
+            'api_url' => 'https://api.upsun.com',
+            'accounts' => 'https://api.upsun.com/',
+            'client_id' => 'upsun-client-php',
             'client_secret' => '',
             'debug' => false,
             'verify' => true,
@@ -103,7 +103,7 @@ class Connector implements ConnectorInterface
             'headers' => [],
             'subscribers' => [],
             'cache' => false,
-            'auth_url' => 'https://auth.api.platform.sh',
+            'auth_url' => 'https://auth.upsun.com',
             'revoke_url' => '',
             'token_url' => '',
             'certifier_url' => '',
@@ -407,7 +407,7 @@ class Connector implements ConnectorInterface
 
         return sprintf(
             '%s/%s (%s; %s; PHP %s)',
-            'Platform.sh-Client-PHP',
+            'Upsun-Client-PHP',
             $version,
             php_uname('s'),
             php_uname('r'),

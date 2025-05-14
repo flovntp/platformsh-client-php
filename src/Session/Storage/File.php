@@ -65,12 +65,12 @@ class File implements SessionStorageInterface
         // back to the temporary directory.
         $home = $this->getHomeDirectory();
         if ($home !== null) {
-            $default = rtrim($home, '/') . '/.platformsh/.session';
+            $default = rtrim($home, '/') . '/.upsun-cli/.session';
             if ($this->canWrite($default)) {
                 return $default;
             }
         }
-        $temp = sys_get_temp_dir() . '/.platformsh-client/.session';
+        $temp = sys_get_temp_dir() . '/.upsun-cli/.session';
         if ($this->canWrite($temp)) {
             return $temp;
         }
